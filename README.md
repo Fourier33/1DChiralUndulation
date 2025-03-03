@@ -2,5 +2,7 @@
 This repository contains Python codes to generate atomic structure, in VASP format, of periodic undulated monolayer 2D materials. The undulation is 1D type, which means that the Gaussian curvature of the monolayer is zero. Please note that the generated structure is reasonable for "true" 2D mateirals, such as hBN and graphene. For monolayer with more than one atom layers, such as TMDs, optimization of atom positions with fixed unit cell parameters is necessary to obtain a reasonable atomic structure. Currently, only 2D hexagonal crystal has been tested. 
 # Usage
 In principle, there is no need to modify the modulation_lib that contains all of the well-defined functions needed to run the main script assign_chiral_modulation. 
+
 In the main script, you need to manually add the information of primitive cell lattice parameters and atom postions in crystal coordinate. The input chi_idx controls the undulation direction, periodic length. The default undulation shape is of Gaussian type, and can be modified by adjusting costum_shape_func based on your choice. The amplitude of the undulation, called "height", is controlled by one of the input of modulation_lib.chiral_modulation. The other parameter "period" is internally determined. 
+
 The output is a file containing only the atom positions in the designed supercell. Other information, lattice parameters, and atom species and numbers, necessary for a complete structure file in VASP format need to be added manually.
